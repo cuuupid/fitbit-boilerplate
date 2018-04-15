@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Setup with FitBit</title>
+    <!-- CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Full width container -->
+    <div class="container-fluid">
+
+        <div class="center">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Setup with Fitbit!</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Just a sec...</p>
+                        <p id="fin"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="auth()" style="visibility: hidden;" class="btn btn-blue">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        (window.parseURL || parseURL)()
+        let t = (window.accessToken || accessToken), uid = (window.userId || userId)
+        if (!t || !uid) document.getElementById('fin').innerText = "Something went wrong! Check console for errors."
+        else {
+            document.getElementById('fin').innerText = "All set!"
+            document.getElementsByClassName('btn')[0].style.visibility = "visible"
+        }
+
+        function gotoApp() {
+            (window.location || location).href = (window.encodeURL || encodeURL)(window.appURL || appURL)
+        }
+    </script>
+</body>
+
+</html>

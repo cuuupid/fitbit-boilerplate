@@ -1,0 +1,18 @@
+html, body {
+    background: #f8f8f8;
+}
+
+.center {
+    vertical-align: middle;
+    margin-top: 10%;
+}
+
+.btn-red, .btn-blue:focus {
+    background-color: #405479;
+    color: #f8f8f8;
+    box-shadow: none;
+}
+
+.btn-blue:hover {
+    background-color: #102850;
+}
