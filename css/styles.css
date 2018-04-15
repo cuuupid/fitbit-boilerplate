@@ -7,7 +7,7 @@ html, body {
     margin-top: 10%;
 }
 
-.btn-red, .btn-blue:focus {
+.btn-blue, .btn-blue:focus {
     background-color: #405479;
     color: #f8f8f8;
     box-shadow: none;
